@@ -1,0 +1,258 @@
+<!doctype html>  
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    
+    <title>CSS ANIMATIONS</title>
+
+    <meta name="description" content="Slides and links to a CSS animation lightening talk">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+  </head>
+  
+  <body>
+    
+    <div class="reveal">
+
+      <!-- Used to fade in a background when a specific slide state is reached -->
+      <div class="state-background"></div>
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section style="margin-top: 15%">
+          <h2>Welcome to</h2>
+          <h1>CSS Animations<h1>
+          
+          <h3 class="inverted">July 7 2015 &middot; San Francisco</h3>
+        </section>
+        
+        <section style="margin-top: 10%">
+          <h1>Topics</h1>
+          <ul style="list-style-type: none; text-align: center">
+            <li><h3>Animations</h3></li>
+            <li><h3>Transitions</h3></li></br>
+            <li><h3>Vendor Prefixes</h3></li>
+            <ul>
+              <li>Ensure the best browser support</li>
+            </ul>
+          </ul>
+        </section>
+
+        <section style="margin-top: 5%">
+          <h2>Animations: What are they?</h2>
+          <h3>CSS Animations are made up of two basic building blocks:</h3>
+          <ol>
+            <li><strong>Keyframes: </strong></li>
+              <ul>
+                <li>Name of the animation -- <i>e.g. bounceIn, scale</i></li>
+                <li>Stages of the animation -- <i>represented in %-ages</i></li>
+                <li>CSS Properties -- <i>e.g. opacity, transform</i></li>
+              </ul>
+          </ol>
+        </section>
+
+        <section style="margin-top: 15%">
+          <h2>Animations: What are they?</h2>
+          <ol>
+            <li>Animation Properties </li>
+              <ul>
+                <li>Assign the @keyframes to the element you want animated</li>
+                <li>Define <strong>HOW</strong> it's animated</li>
+              </ul>
+          </ol>
+        </section>
+        
+        <!-- Example of nested vertical slides -->
+        <section style="margin-top: 5%">
+            <h2>EXAMPLE</h2>
+            <!-- <p>&nbsp;</p> -->
+            <p>
+              This animation has two stages: In the first stage (0%), the element is scaled at 100 percent using transform scale; the second stage (100%) is scaled at 130 percent.
+            </p>
+            <pre class="fragment"><code> @keyframes scale {
+  0% {
+    transform: scale(1);
+     -webkit-transform: scale(-100px);
+  }
+  
+  100% {
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+  }
+}</code></pre>
+        </section>
+
+        <section style="margin-top: 5%">
+            <h2>EXAMPLE</h2>
+            <p>&nbsp;</p>
+            <div class="container">
+              <p class="forward">This scales and stays</p>
+            </div>
+        </section>
+
+        <section style="margin-top: 5%">
+            <h2>Transitions: What are they?</h2>
+
+            <p>&nbsp;</p>
+              <ul>
+                <li>Allow you to control the speed of animations when changing properties.</li>
+                <li>Cause the changes in a property to take place over a period of time.</li>
+              </ul>
+        </section>
+
+        <section style="margin-top: 5%">
+            <h2>EXAMPLES</h2>
+            <!-- <p>Allows you to control the speed of animations when changing properties.</p> -->
+            <p>&nbsp;</p>
+              <div class="square-container">
+                <p class="square">Home</p>
+                <p class="square">About</p>
+                <p class="square">Contact</p>
+              </div>
+        </section>
+
+        <section style="margin-top: 5%">
+            <h2>EXAMPLE</h2>
+            <!-- <p>&nbsp;</p> -->
+            <p>
+              This transition eases the <strong>background-color</strong> out to white (from salmon); and the text <strong>color</strong> from white to grey with a :hover state over a 1 second period.
+            </p>
+            <pre class="fragment"><code> .square:hover {
+  background-color: white;
+  width: 150px;
+  height: 50px;
+  color: #666;
+  text-transform: uppercase;
+  -webkit-transition-property: background-color, color;
+  transition-property: background-color, color;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}</code></pre>
+        </section>  
+
+        <section style="margin-top: 5%">
+          <h2>Why are CSS Animations useful?</h2>
+          <ul>
+            <li>It's a powerful way to draw users attention to important areas of your product.</li>
+            <li>It adds interest to the user interface.</li>
+            <li>It enhances the experiene and add personality to the interface.</li>
+          </ul>
+        </section>
+
+        <section style="margin-top: 5%">
+          <h2>What were the roadblocks?</h2>
+
+        </section>
+
+        <section style="margin-top: 5%">
+          <h2>What are the lessons learned?</h2>
+          <p>Did not realize there was a difference between animations and transitions, or what that meant.</p>
+           <div class='wrapper'>
+              <div class='sun'></div>
+              <div class='clouds-wrapper'>
+                <div class='clouds1'>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class='shadow'>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+              <div class='rain-wrapper'>
+                <div class='rain-container'>
+                  <div class='rain1'></div>
+                </div>
+                <div class='rain-container'>
+                  <div class='rain2'></div>
+                </div>
+                <div class='rain-container'>
+                  <div class='rain3'></div>
+                </div>
+              </div>
+            </div>
+        </section>
+        
+        <section style="margin-top: 5%">
+          <h1>The End</h1>
+        </section>
+      </div>
+
+      <!-- The navigational controls UI -->
+      <aside class="controls">
+        <a class="left" href="#">&#x25C4;</a>
+        <a class="right" href="#">&#x25BA;</a>
+        <a class="up" href="#">&#x25B2;</a>
+        <a class="down" href="#">&#x25BC;</a>
+      </aside>
+
+      <!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+      <div class="progress"><span></span></div>
+      
+    </div>
+
+    <!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
+    <script src="lib/js/head.min.js"></script>
+
+    <script>
+      // Load the main reveal.js script
+      head.js( 'js/reveal.js', function() {
+        // Parse the query string into a key/value object
+        var query = {};
+
+        location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+          query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+        } );
+
+        // Fires when a slide with data-state=customevent is activated
+        Reveal.addEventListener( 'customevent', function() {
+          console.log( '"customevent" has fired' );
+        } );
+
+        // Fires each time a new slide is activated
+        Reveal.addEventListener( 'slidechanged', function( event ) {
+          // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+        } );
+
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+          controls: true,
+          progress: true,
+          history: true,
+          
+          theme: query.theme || 'beige', // default/neon/beige
+          transition: query.transition || 'linear' // default/cube/page/concave/linear(2d)
+        });
+      } );
+      
+      // Load third party scripts
+      head.js( 'lib/js/classList.js' );
+      head.js( 'lib/js/highlight.js', function() {
+        // Fire off syntax highlighting for potential code samples in the slides
+        hljs.initHighlightingOnLoad();
+      } );
+
+      // If we're runnning the notes server we need to include some additional JS
+      // TODO Is there a better way to determine if we're running the notes server?
+      if( window.location.host === 'localhost:1947' ) {
+        head.js( 'socket.io/socket.io.js', 'plugin/speakernotes/client.js' );
+      }
+    </script>
+    
+  </body>
+</html>
