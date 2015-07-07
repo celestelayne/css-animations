@@ -1,0 +1,289 @@
+/*********************************************
+ * CSS FOR TICK TOCK
+ *********************************************/
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
+/*html, body {
+  height: 100%;
+}*/
+
+.slide-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  /*background: #222;*/
+  -webkit-animation: color 40s linear infinite;
+          animation: color 40s linear infinite;
+  overflow: hidden;
+/*  background: -webkit-radial-gradient(center center, circle, #2a2a2a, #000000);
+  background: radial-gradient(circle at center center, #2a2a2a, #000000);*/
+}
+
+@-webkit-keyframes color {
+  from, to {
+    color: yellow;
+  }
+  33% {
+    color: cyan;
+  }
+  66% {
+    color: magenta;
+  }
+}
+
+@keyframes color {
+  from, to {
+    color: yellow;
+  }
+  33% {
+    color: cyan;
+  }
+  66% {
+    color: magenta;
+  }
+}
+
+figure {
+  -webkit-transform: translateY(80vh);
+      -ms-transform: translateY(80vh);
+          transform: translateY(80vh);
+}
+
+figure, .wheel {
+  position: relative;
+  width: 20vh;
+  height: 20vh;
+}
+
+.wheel {
+  -webkit-animation: ticktock 2s cubic-bezier(1, -0.21, 0.85, 1.29) infinite;
+          animation: ticktock 2s cubic-bezier(1, -0.21, 0.85, 1.29) infinite;
+}
+
+@-webkit-keyframes ticktock {
+  to {
+    -webkit-transform: rotate(-22.5deg);
+            transform: rotate(-22.5deg);
+  }
+  50% {
+    -webkit-transform: rotate(-11.25deg);
+            transform: rotate(-11.25deg);
+  }
+}
+
+@keyframes ticktock {
+  to {
+    -webkit-transform: rotate(-22.5deg);
+            transform: rotate(-22.5deg);
+  }
+  50% {
+    -webkit-transform: rotate(-11.25deg);
+            transform: rotate(-11.25deg);
+  }
+}
+.tick {
+  font: 800 20vh/20vh Lato, monospace;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 1000%;
+  top: -90vh;
+  -webkit-animation: bop 1s infinite;
+          animation: bop 1s infinite;
+}
+.tick:nth-child(even):after {
+  content: "O";
+}
+.tick:nth-child(odd):after {
+  content: "I";
+}
+.tick:nth-child(1) {
+  -webkit-transform: rotate(11.25deg);
+      -ms-transform: rotate(11.25deg);
+          transform: rotate(11.25deg);
+}
+.tick:nth-child(2) {
+  -webkit-transform: rotate(22.5deg);
+      -ms-transform: rotate(22.5deg);
+          transform: rotate(22.5deg);
+}
+.tick:nth-child(3) {
+  -webkit-transform: rotate(33.75deg);
+      -ms-transform: rotate(33.75deg);
+          transform: rotate(33.75deg);
+}
+.tick:nth-child(4) {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.tick:nth-child(5) {
+  -webkit-transform: rotate(56.25deg);
+      -ms-transform: rotate(56.25deg);
+          transform: rotate(56.25deg);
+}
+.tick:nth-child(6) {
+  -webkit-transform: rotate(67.5deg);
+      -ms-transform: rotate(67.5deg);
+          transform: rotate(67.5deg);
+}
+.tick:nth-child(7) {
+  -webkit-transform: rotate(78.75deg);
+      -ms-transform: rotate(78.75deg);
+          transform: rotate(78.75deg);
+}
+.tick:nth-child(8) {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.tick:nth-child(9) {
+  -webkit-transform: rotate(101.25deg);
+      -ms-transform: rotate(101.25deg);
+          transform: rotate(101.25deg);
+}
+.tick:nth-child(10) {
+  -webkit-transform: rotate(112.5deg);
+      -ms-transform: rotate(112.5deg);
+          transform: rotate(112.5deg);
+}
+.tick:nth-child(11) {
+  -webkit-transform: rotate(123.75deg);
+      -ms-transform: rotate(123.75deg);
+          transform: rotate(123.75deg);
+}
+.tick:nth-child(12) {
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+.tick:nth-child(13) {
+  -webkit-transform: rotate(146.25deg);
+      -ms-transform: rotate(146.25deg);
+          transform: rotate(146.25deg);
+}
+.tick:nth-child(14) {
+  -webkit-transform: rotate(157.5deg);
+      -ms-transform: rotate(157.5deg);
+          transform: rotate(157.5deg);
+}
+.tick:nth-child(15) {
+  -webkit-transform: rotate(168.75deg);
+      -ms-transform: rotate(168.75deg);
+          transform: rotate(168.75deg);
+}
+.tick:nth-child(16) {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.tick:nth-child(17) {
+  -webkit-transform: rotate(191.25deg);
+      -ms-transform: rotate(191.25deg);
+          transform: rotate(191.25deg);
+}
+.tick:nth-child(18) {
+  -webkit-transform: rotate(202.5deg);
+      -ms-transform: rotate(202.5deg);
+          transform: rotate(202.5deg);
+}
+.tick:nth-child(19) {
+  -webkit-transform: rotate(213.75deg);
+      -ms-transform: rotate(213.75deg);
+          transform: rotate(213.75deg);
+}
+.tick:nth-child(20) {
+  -webkit-transform: rotate(225deg);
+      -ms-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+.tick:nth-child(21) {
+  -webkit-transform: rotate(236.25deg);
+      -ms-transform: rotate(236.25deg);
+          transform: rotate(236.25deg);
+}
+.tick:nth-child(22) {
+  -webkit-transform: rotate(247.5deg);
+      -ms-transform: rotate(247.5deg);
+          transform: rotate(247.5deg);
+}
+.tick:nth-child(23) {
+  -webkit-transform: rotate(258.75deg);
+      -ms-transform: rotate(258.75deg);
+          transform: rotate(258.75deg);
+}
+.tick:nth-child(24) {
+  -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+.tick:nth-child(25) {
+  -webkit-transform: rotate(281.25deg);
+      -ms-transform: rotate(281.25deg);
+          transform: rotate(281.25deg);
+}
+.tick:nth-child(26) {
+  -webkit-transform: rotate(292.5deg);
+      -ms-transform: rotate(292.5deg);
+          transform: rotate(292.5deg);
+}
+.tick:nth-child(27) {
+  -webkit-transform: rotate(303.75deg);
+      -ms-transform: rotate(303.75deg);
+          transform: rotate(303.75deg);
+}
+.tick:nth-child(28) {
+  -webkit-transform: rotate(315deg);
+      -ms-transform: rotate(315deg);
+          transform: rotate(315deg);
+}
+.tick:nth-child(29) {
+  -webkit-transform: rotate(326.25deg);
+      -ms-transform: rotate(326.25deg);
+          transform: rotate(326.25deg);
+}
+.tick:nth-child(30) {
+  -webkit-transform: rotate(337.5deg);
+      -ms-transform: rotate(337.5deg);
+          transform: rotate(337.5deg);
+}
+.tick:nth-child(31) {
+  -webkit-transform: rotate(348.75deg);
+      -ms-transform: rotate(348.75deg);
+          transform: rotate(348.75deg);
+}
+.tick:nth-child(32) {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+.tick.hand {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+.tick.hand:before, .tick.hand:after {
+  -webkit-transform: translateY(-20vh);
+      -ms-transform: translateY(-20vh);
+          transform: translateY(-20vh);
+}
+.tick.hand:before {
+  display: block;
+  content: "T";
+}
+.tick.hand:after {
+  -webkit-transform: translateY(-20vh);
+      -ms-transform: translateY(-20vh);
+          transform: translateY(-20vh);
+  content: "C \a K";
+}
